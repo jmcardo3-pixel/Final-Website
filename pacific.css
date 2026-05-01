@@ -1,0 +1,229 @@
+*{
+  box-sizing: border-box;
+}
+
+body   { background-color: #EAEAEA;
+         color: #555555; 
+         font-family: Arial, Helvetica, sans-serif;
+       }
+#wrapper { 
+           background-color: #90C7E3;
+           background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3);
+         }
+header { background-color: #002171;
+         color: #FFFFFF;
+         text-align: center;
+       }
+
+header a {
+  text-decoration: none;
+}
+
+header a:link {
+  color: #FFFFFF;
+}
+
+header a:visited{
+  color: #FFFFFF;
+}
+
+header a:hover {
+  color: #98c7e3
+}
+nav { font-weight: bold;
+      padding: 0;
+      text-align: center;
+      font-size: 120%;
+    }
+
+nav li {
+  border-bottom: 1px solid #000033;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  font-size: 1.2em;
+}
+
+nav a:link {
+  color: #5c7fa3
+}
+
+nav a:visited {
+  color: #344873;
+}
+
+nav a:hover {
+  color: #a52a2a;
+  transition: color 3s ease-out;
+}
+nav a { text-decoration: none;
+      }
+
+
+h1 { margin-bottom: 0;
+     font-family: Georgia, 'Times New Roman', serif;
+     margin-top: 0;
+     letter-spacing: 0.25cm;
+     padding-top: 0.5em;
+     padding-bottom: 0.25em;
+   }
+main { padding-top: 1px;
+       padding-right: 20px;
+       padding-left: 30px;
+       padding-bottom: 20px;
+       display: block;
+       background-color: #FFFFFF;
+       overflow: auto;
+}
+h2 { color: #1976D2;
+     font-family: Georgia, 'Times New Roman', serif;
+     text-shadow: 1px 1px #CCCCCC;
+   }
+h3 { color: #000033;
+     font-family: Georgia, 'Times New Roman', serif;
+   }
+h4 { color: #000033;
+     font-family: Georgia, 'Times New Roman', serif;
+   }
+main ul {
+  list-style-image: url("marker.gif");
+}
+ul li { list-style-image: url("marker.gif");
+     list-style-type: disc;
+   }
+footer { font-size: 75%;
+         font-style: italic;
+         text-align: center;
+         font-family: Georgia, 'Times New Roman', serif;
+         padding: 2em;
+         background-color: #FFFFFF;
+       }
+#homehero { height: 300px;
+            background-image: url("Tech.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+          }
+#yurthero { height: 300px;
+            background-image: url("BB.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+          }
+#trailhero { height: 300px;
+            background-image: url("work.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+          }
+
+table { border: 2px solid #3399cc;
+        border-collapse: collapse;
+}
+
+td, th { padding: .5em;
+         border: 2px solid #3399CC;
+}
+
+td { text-align: center;}
+
+.text {text-align: left;}
+
+tr:nth-of-type { background-color: #F5FAFC;}
+
+form{ display: flex;
+      flex-direction: column;
+}
+dt {color: #002171}
+
+.resort { color: #1976D2; 
+          font-weight: bold;
+          flex-wrap: nowrap;
+        }
+
+input,
+textarea{ margin-bottom: 0.5em;}
+
+.contact { font-size: 90%;
+         }
+
+video { float: right;
+  margin: 1em;
+}
+@media (min-width: 600px){
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  nav li{
+    border-bottom: none;
+  }
+
+  section{
+    margin-left: 2em;
+    margin-right: 2em;
+    flex: 1;
+  }
+  .flow{
+    display: flex;
+    flex-direction: row;
+  }
+
+form {width: 60%;
+max-width: 30em;
+display: grid;
+grid-gap: 1em;
+grid-template-columns: 6em 1fr;
+}
+
+input[type ="submit"]{ grid-column: 2 / 3;
+  width: 9em;
+}
+
+@media (min-width: 1024px) {
+#wrapper {
+  margin: auto;
+  width: 80;
+  border: 1px solid #002171;
+  box-shadow: 3px 3px 3px #002171;
+}
+nav{
+  text-align:left;
+  padding-left: 1em;
+}
+@supports(display:grid){
+  nav ul{
+    flex-direction: column;
+    padding-top: 1em;
+  
+  }
+  .hero{
+    grid-area: hero;
+  }
+  header {
+    grid-area: header;
+  }
+  nav{
+    grid-area: nav;
+  }
+  main{
+    grid-area: main;
+  }
+  footer{
+    grid-area:footer
+  }
+  #wrapper{
+    display: grid;
+    grid-template: 
+    "header header"
+    "nav hero"
+    "nav main"
+    "nav footer"
+    /180px 1fr;
+  }
+}
+  }
+}
